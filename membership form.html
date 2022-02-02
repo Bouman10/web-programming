@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<title> REGISTRATION FORM</title>
+<link rel="stylesheet" type="text/css" href="stylesheet/style.css"/>
+<section id="main">
+	<h2>ONLINE MEMBERSHIP REGISTRATION FORM</h2>
+	<hr/>
+	<article>
+		<form oninput="x.value = parseint (type.value)* parseint(duration.value)" method="GET">
+			<ul>
+				<fieldset>
+					<legend>Personal INformation</legend>
+					<div id="adddetails">
+						<li>
+							<label>Name:</label>
+							<input type="text" value="" id="first" name="first" required="flag" resize="8" tabindex="1" />
+							<input type="text" value="" id="last" name="last" required="flag" size="14" tabindex="2" /><br/>
+							<label for="first" style="margin-left: 60px;">First</label>
+							<label for="last" style="margin-left: 120px;">Last</label>
+						</li>
+						<li>
+							<label for="address">Permanent Address</label>
+							<input type="text" id="address" name="address" value="" tabindex="4">
+						</li>
+						<li style="margin-left: 50px;">
+							<label for="email">Email Address</label>
+							<input type="email" value="" id="email" name="email" placeholder="" tabindex="5">
+						</li>
+					</div>
+					<div id="adddetails1">
+						<li style="margin-left: 60px;">
+							<label for="gender">Gender</label>
+							<input type="radio" name="gender" id="gender" value="male" checked="flag" tabindex="6">Male
+							<input type="radio" name="gender" id="gender" value="female" tabindex="7">Female
+						</li>
+						<li style="margin-left: 60px;">
+							<label>Phone Number:<img src="A1.jpeg" height="10px" width="10px"/></label>
+							<input type="tel" value="" size="10" maxlength="12" tabindex="13"
+							required="true" placeholder="Number" pattern="[+0-9] {1,4}" title="format: (+) 99 (99)">
+							<label for="">-</label>
+							<input type="tel" value="" size="10" maxlength="12" tabindex="13" required="true" placeholder="Number" pattern="[0-9] {8,}" title="Minimum 8 Numbers">
+</li>
+      <li style="margin-left: 60px;">
+      	<label for="country">Country</label>
+      	<select name="country" id="country" tabindex="12">
+      		<option value="United States">United States</option>
+      		<option value="United Kingdom">United Kingdom</option>
+      		<option value="Australia">Australia</option>
+      		<option value="Canada">Canada</option>
+      	</select>
+      </li>
+
+					</div>
+			</fieldset>
+			<fieldset>
+				<legend>Payment Details</legend>
+				<div id="addpayment">
+					<li>
+						<label for="type">Membership Type</label>
+						<select name="type" id="type">
+							<option value="400">Gold - $400</option>
+								<option value="500">Siler - $500</option>
+									<option value="600">Platinum - $600</option>
+									</select>
+									</li>
+									<li>
+										<label for="duration">Duration [years]:</label>
+										<input type="Number" name="duration" id="duration" value="0" min="1" max="5" step="1">
+									</li>
+									<li>
+										<label for="">Current Discount On All Packages [10%]:</label>
+										<meter value="0.1">10%</meter>
+										<p onclick="y.value= x.value- (x.value*0.1)"><a href="#">Show Discounted Fees</a>
+										</p><br>
+										<label for="">Actual Payment Fees $,</label>
+										<output style="border-width: 2px; border-style: double; border-color: #DE3016;" name="y" for="x"></output>
+
+									
+									</li>
+								</div>
+								<div>
+									<li>
+										<label for="startmonth">Membership Start Month</label>
+										<input type="Month" id  name="">
+									</li>
+								</div>
+				</fieldset>
+<body>
+
+</body>
+</html>

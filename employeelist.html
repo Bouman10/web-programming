@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		window.onload = function () {
+				var employee = new Array(6);
+		employee[0] = new Array ('Bouman', 'Abubakar');
+		employee[1] = new Array ('Babban yaya', 'Ahmed');
+		employee[2] = new Array ('Ejan Nla', 'Shefiu');
+		employee[3] = new Array ('Feesah', 'Nafeesah');
+		employee[4] = new Array ('Conceptz','Abdullahi');
+		employee[5] = new Array ('AK','Abdulrazak')
+
+
+		var empWindow = window.document;
+		empWindow.write ('<H2> <center> Employee List </center></H2> <br/>');
+		empWindow.write('<Table style="border: 1px solid #0000A0; width: 70%; margin-left: 90px;">');
+
+		empWindow.write('<TR>');
+		empWindow.write('<TD style="border: 1px solid #0000A0; background-color: #FFEFFF;"> <B> EMPLOYEE CODE </B>  </TD>');
+		empWindow.write('<TD style="border: 1px solid #0000A0; background-color: #FFEFFF;"> <B> EMPLOYEE NAME </B> </TD>');
+
+		empWindow.write('</TR>');
+
+
+
+
+
+
+		for (var i=0; i<employee.length; i++)
+		{
+			empWindow.write('<TR>');
+			for (var j=0; j<employee[i].length; j++)
+			{
+				empWindow.write('<TD style="border: 1px solid #0000A0; background-color: #FFEFFF;">' + employee[i][j] + '</TD>');
+			}
+			empWindow.write('</TR>');
+		}
+		empWindow.write('</Table>');
+		} 
+	</script>
+</head>
+<body>
+	
+
+</body>
+</html>

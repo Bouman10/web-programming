@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+      <h1><b>EMPLOYEE HOME</b></h1>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management of Employee's</title>
+    <link rel="stylesheet" href="employee.css">
+    <meta charset="UTF-8">
+
+    <script src="/calculatedays.js"></script>
+    <script>
+        function daysDifference(){
+            var dateInput1 = document.getElementById("dateInput1").value;
+            var dateInput2 = document.getElementById("dateInput2").value;
+
+            var date1 = new Date(dateInput1);
+            var date2 = new Date(dateInput2);
+
+            if(date2<date1){
+                alert('Applied To date cannot be less than applied From date');
+            }
+            else{
+                var time_difference = date2.getTime() - date1.getTime();
+
+                var result = time_difference / (1000 * 60 * 60 * 24);
+
+                return document.getElementById('result').innerHTML = result + "days applied";
+               
+            }
+            var prButton = document.getElementById('printButton');
+            prButton.disabled = false;
+        }
+    </script>
+    <script src="/displayLeaveDetails.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav">
+            <li><img src="/download-3.jpg" height="20" width="20"><a href="employeelist.html">List</a></li>
+            <li><img src="/download-1.jpg" height="20" width="20"><a href="membership form.html">Register</a></li>
+            <li><img src="/download-2.jpg" height="20" width="20"><a href=".html">Contact Us</a></li>
+            <li><img src="/download-4.jpg" height="20" width="20"><a href="employeesearch.html">Employee Search</a></li>
+        </ul><br>
+        </nav><br>
+        <h2><center>Employee Leave Application</center></h2>
+    </header><br><hr>
+    <section>
+        <form action="" id="frmLeave" style="font-style: italic; font-weight: bold;" onsubmit="calculateDays(); return false;">
+            <table>
+                <tr>
+                    <td>
+                        <label for="sltEmployeeNumber">Employee ID:</label>
+                    </td>
+                    <td>
+                        <select id="sltEmployeeNumber" onchange="txtEmployeeName.value=this.options[selectedIndex].value;">
+                            <option value="">--SELECT--</option>
+                            <option value="Abubakar Abdulhakeem">Bouman</option>
+                            <option value="Abdulhakeem Shefiu">Ejan Nla</option>
+                            <option value="Abdulhakeem Ahmed">Babban yaya</option>
+                            <option value="Abdulhakeem Nafeesah">Feesah</option>
+                            <option value="Abdulhakeem Abdullahi">Conceptz</option>
+                            <option value="Abdulhakeem Adesoye">Operation</option>
+                        
+                            
+                        
+                            
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="txtEmployeeName">Employee Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="txtEmployeeName" size="20" required readonly/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sltLeaveType">Type of Leave/Absence:</label>
+                    </td>
+                    <td>
+                        <select name="" id="sltLeaveType">
+                            <option value="">--SELECT--</option>
+                            <option value="Paid Leave">Paid leave</option>
+                            <option value="Non-Paid Leave">Non-Paid Leave</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Reason for Taking Leave:</label>
+                    </td>
+                    <td>
+                        <textarea id="txtReason" cols="50" rows="4"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Approve Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="approveName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dtForm">From Date</label>
+                    </td>
+                    <td>
+                        <input type="date" id="dateInput1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dtTo">To Date</label>
+                    </td>
+                    <td>
+                        <input type="date" id="dateInput2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Number of Days:
+                    </td>
+                    <td>
+                        <h3 style="color: #32a80f;" id="result"></h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <button onclick="daysDifference(); return false;">
+                     Calculate number of days
+                    </button>
+                    <button>
+                        Cancel
+                    </button>
+                    </td>
+                    <td>
+                        <button type="button"  onclick="displayLeaveDetails()" id="printButton" style="background-color:#B3FFB3; color: red;">Print Application</button>
+                    </td>
+                </tr>
+            </table></form>
+    </section>
+   
+</body>
+</html>

@@ -1,0 +1,93 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+h1{
+	font :bold 30px Courier Gothie;
+	color: orangered;
+	text-align: center;
+}
+   header, section, footer, article
+   {
+   	display: block;
+   }
+   #main{
+   	margin: 17px 200px 15px 200px;
+   	width: 800px;
+   	padding: 30px;
+   	text-align: left;
+   	font-size: 14px;
+   	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+   	background: wheat;
+   	border-radius: 25px;
+   	border-radius: 25px;
+   	border-color: #FC693F;
+   	border-width: 6px;
+   	border-style: solid;
+
+   }
+   ul {list-style-type: none;}
+   li{margin: 10px;}
+
+   #adddetails{
+   	display: block;
+   	width: 400px;
+   	height: 160px;
+   	margin-right: 0px;
+   	float: left;
+
+  }
+  #adddetail1{
+     	display: block;
+   	width: 350px;
+   	height: 160px;
+   	float: left;
+	
+  }
+  header{
+  	width: 850px;
+  	background: #ECEACC;
+  	margin: 17px 200px 15px 200px;
+  	padding: 5px;
+  	border-radius: 10px; // for Opera
+  }
+  footer{
+  		width: 850px;
+  	background: #ECEACC; //#C5C5C5; //E6E6E6;
+  	margin: 17px 200px 15px 200px;
+  	padding: 5px;
+  	border-radius: 5px; // for Opera
+  	color: #ffffff
+  }
+  #prog input{
+  	margin-right: 10px;
+  	margin-left: 10px;
+  	padding-right: 10px;
+  }
+  #addpayment{
+  	display: block;
+  	width: 400px;
+  	height: 180px;
+  	margin-right: 80px;
+  	float: left;
+  }
+  input:required {
+  	outline: 1px red solid;
+  	color: blue;
+
+  }
+  input:required:valid {
+  	background-image: url(/A1.jpeg);
+  	background-size: 10px 10px;
+  	background-position: right top;
+  	background-repeat: no-repeat;
+
+  }
+   input:required:invalid {
+  	background-image: url(/A1.jpeg);
+  	background-size: 10px 10px;
+  	background-position: right top;
+  	background-repeat: no-repeat;
+
+  }
+  
